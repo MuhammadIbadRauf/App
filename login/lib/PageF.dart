@@ -1,19 +1,15 @@
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:login/login.dart';
+import 'mywidget.dart';
 
-import 'mystatefulwidget.dart';
-
-void main() => runApp(const MyApp());
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class changeclass extends StatefulWidget {
+  const changeclass({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<changeclass> createState() => _changeclassState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _changeclassState extends State<changeclass> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -88,13 +84,21 @@ class _MyAppState extends State<MyApp> {
                         backgroundColor: Color.fromARGB(255, 21, 50, 129),
                         child: IconButton(
                             color: Colors.white,
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MyLogin()));
+                            },
                             icon: Icon(
                               Icons.arrow_back,
                             )),
                       ),
                       Align(
-                        alignment: Alignment(-0.018, 0.037),
+                        alignment: Alignment(
+                          0.18,
+                          0.037,
+                        ),
                         child: SizedBox(
                           width: 120.0,
                           height: 40.0,
@@ -103,7 +107,7 @@ class _MyAppState extends State<MyApp> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => MyApp()));
+                                      builder: (context) => changeclass()));
                             },
                             child: Text("Submit"),
                             style: ElevatedButton.styleFrom(
@@ -119,16 +123,16 @@ class _MyAppState extends State<MyApp> {
                           ),
                         ),
                       ),
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundColor: Color.fromARGB(255, 22, 48, 121),
-                        child: IconButton(
-                            color: Colors.white,
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.arrow_forward,
-                            )),
-                      )
+                      // CircleAvatar(
+                      //   radius: 30,
+                      //   backgroundColor: Color.fromARGB(255, 22, 48, 121),
+                      //   child: IconButton(
+                      //       color: Colors.white,
+                      //       onPressed: () {},
+                      //       icon: Icon(
+                      //         Icons.arrow_forward,
+                      //       )),
+                      // )
                     ],
                   ),
                 ),
@@ -140,7 +144,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-//___________________________END___________________________________
-
-

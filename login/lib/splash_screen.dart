@@ -27,7 +27,6 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
-          CircularProgressIndicator(),
           Align(
             alignment: Alignment(0.091, -0.631),
             child:
@@ -58,8 +57,14 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment(0.080, 0.9),
+            child: CircularProgressIndicator(),
+          )
         ],
       ),
     );
   }
 }
+
+//CircularProgressIndicator(),

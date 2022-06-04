@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:login/login.dart';
 import 'package:login/register.dart';
 import 'package:login/splash_screen.dart';
+import 'PageF.dart';
+import 'mywidget.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
+          //primarySwatch: Colors.orange,
+          ),
       home: SplashScreen(),
     );
   }
